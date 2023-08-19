@@ -59,13 +59,35 @@ public class PNCreatorExtras {
 			.putData("dd_model", "data:bomber01.n/bomber01.nvx")
 			.putData("dd_texture", "data:bomber01.n/texturealpha.ntx")
 			.renderTo(this.getScriptOutput("bomber01_garage"));
-		
+
 		this.getScriptTemplate("p_shark_garage01")
 			.putData("vehicle_class", "concret.technical.static.building.garage.bomber02_garage")
 			.putData("buildproduct", "bomber02")
 			.putData("shark_model", "data:bomber02.n/bomber02.nvx")
 			.putData("shark_texture", "data:bomber02.n/texturealpha.ntx")
 			.renderTo(this.getScriptOutput("bomber02_garage"));
+
+		this.getScriptTemplate("garage2")
+			.putData("vehicle_class", "concret.technical.static.building.garage.baron_garage")
+			.putData("buildproduct", "baron")
+			.putData("dd_model", "data:baron.n/fighter.nvx")
+			.putData("dd_texture", "data:baron.n/texturealpha.ntx")
+			.renderTo(this.getScriptOutput("baron_garage"));
+
+		this.getScriptTemplate("serp_garage01")
+			.putData("buildproduct", "serp03")
+			.renderTo(this.getScriptOutput("serp_garage03"));
+
+		this.getScriptTemplate("s_navigationtower01")
+			.putData("steer_type", "nfreesteer")
+			.renderTo(this.getScriptOutput("mp_s_navigationtower01"));
+
+		this.getScriptTemplate("g_navtower")
+			.putData("steer_type", "nfreesteer")
+			.renderTo(this.getScriptOutput("mp_g_navtower"));
+
+		// aliases
+		this.getScriptTemplate("garage2").renderTo(this.getScriptOutput("dd_garage"));
 	}
 
 	private void compile() throws IOException {
