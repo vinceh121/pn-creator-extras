@@ -29,6 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B compile assembly:single --file pom.xml
+    - name: Download classmodel
+      run: curl -Lo project-nomads.classmodel.json https://raw.githubusercontent.com/vinceh121/nebula2-assets-extractor/master/project-nomads.classmodel.json
     - name: Build NPK
       run: java -jar target/pn-creator-extras-0.0.1-SNAPSHOT-jar-with-dependencies.jar
     - name: Release
