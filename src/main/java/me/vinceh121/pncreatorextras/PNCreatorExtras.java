@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -88,6 +89,52 @@ public class PNCreatorExtras {
 
 		// aliases
 		this.getScriptTemplate("garage2").renderTo(this.getScriptOutput("dd_garage"));
+
+		// der spenders!!!!
+		for (String buildProduct : List.of("g_drive",
+				"g_garage01",
+				"g_guntower01",
+				"g_guntower02",
+				"g_guntower03",
+				"g_navtower",
+				"g_powerplant01",
+				"g_powerplant02",
+				"g_powerplant",
+				"g_scoutgarage01",
+				"g_silo01",
+				"g_silo02",
+				"g_silo03",
+				"j_guntower01",
+				"j_guntower01_old",
+				"j_guntower01_old_plus",
+				"j_guntower02",
+				"j_guntower03",
+				"j_island01",
+				"j_navigationtower01",
+				"j_powerplant01",
+				"j_powerplant02",
+				"j_powerplant03",
+				"j_scoutgarage01",
+				"j_silo01",
+				"j_silo02",
+				"j_silo03",
+				"s_guntower01",
+				"s_guntower02",
+				"s_guntower03",
+				"s_navigationtower01",
+				"s_navigationtowerold",
+				"s_scoutgarage01",
+				"s_silo01",
+				"s_silo02",
+				"s_silo03",
+				"s_suncollector01",
+				"s_suncollector02",
+				"s_suncollector03")) {
+
+			this.getScriptTemplate("mp_spender_j_guntower")
+				.putData("buildproduct", buildProduct)
+				.renderTo(this.getScriptOutput("spender_" + buildProduct));
+		}
 	}
 
 	private void compile() throws IOException {
