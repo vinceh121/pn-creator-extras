@@ -4,7 +4,7 @@ This mod adds entities that feel like should be in the game, but aren't.
 
 ## Download
 
-![Latest NPK](https://img.shields.io/github/downloads/vinceh121/pn-creator-extras/latest/pn-creator-extras.npk?style=for-the-badge)
+[![Latest NPK](https://img.shields.io/github/downloads/vinceh121/pn-creator-extras/latest/pn-creator-extras.npk?style=for-the-badge)](https://github.com/vinceh121/pn-creator-extras/releases/latest)
 
 Download the `pn-create-extras.npk` file, move it into your Project Nomads installation next to the `data.npk` file.
 Edit the `scripts\envinit.tcl` file, insert the following at line 101: `/sys/server/file2.parsefile "home:pn-creator-extras.npk"`
