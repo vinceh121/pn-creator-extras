@@ -1,0 +1,8 @@
+/target/
+/dist/
+
+/.settings/
+.classpath
+.project
+
+project-nomads.classmodel.json
