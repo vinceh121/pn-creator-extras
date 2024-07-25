@@ -138,6 +138,7 @@ public class PNCreatorExtras {
 				"guntower02",
 				"mechs_guntower02",
 				"mp_artefaktpress",
+				"mp_j_scoutgarage01",
 				"p_biggun",
 				"p_flak",
 				"serp_garage01",
