@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -91,7 +92,7 @@ public class PNCreatorExtras {
 		this.getScriptTemplate("garage2").renderTo(this.getScriptOutput("dd_garage"));
 
 		// der spenders!!!!
-		for (String buildProduct : List.of("g_drive",
+		final List<String> spenders = List.of("g_drive",
 				"g_garage01",
 				"g_guntower01",
 				"g_guntower02",
@@ -129,7 +130,23 @@ public class PNCreatorExtras {
 				"s_silo03",
 				"s_suncollector01",
 				"s_suncollector02",
-				"s_suncollector03")) {
+				"s_suncollector03",
+
+				"artefakttresor01",
+				"bordkanone",
+				"bordkanone_2",
+				"guntower02",
+				"mechs_guntower02",
+				"mp_artefaktpress",
+				"p_biggun",
+				"p_flak",
+				"serp_garage01",
+				"swarmtower01");
+
+		assert new HashSet<String>(spenders).size() == spenders.size() : "Spenders array has duplicated elements: "
+				+ spenders.stream().distinct().filter(s -> spenders.indexOf(s) != spenders.lastIndexOf(s)).toList();
+
+		for (String buildProduct : spenders) {
 
 			this.getScriptTemplate("mp_spender_j_guntower")
 				.putData("buildproduct", buildProduct)

@@ -812,7 +812,7 @@ new nfactory vhcl
 			.setbuildenergy 0.0
 			.setmaxproducts 9999
 			.setbuildrelpos 0.0 2.0 0.0
-			.setbuildproduct "mp_j_guntower01"
+			.setbuildproduct "${buildproduct!"mp_j_guntower01"}"
 		sel ..
 	sel ..
 	new nroot explode
